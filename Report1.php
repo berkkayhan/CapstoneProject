@@ -46,6 +46,7 @@ if ($selectedAlumniID) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Option 1</title>
     <link rel="stylesheet" href="css/stylesss.css">
+ 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,11 +55,43 @@ if ($selectedAlumniID) {
             padding: 0;
         }
         header {
-            background: #333;
+            position: relative;
+            padding: 0 20px;
+            background-color: #333;
             color: #fff;
-            padding: 1rem;
-            text-align: center;
+            text-align: center; 
         }
+        .header-content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 15px 0;
+            position: relative; 
+        }
+        .logo {
+            height: 85px;
+            width: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 20px; 
+        }
+      header h1 {
+            font-size: 2.5rem; 
+        }
+        toc-menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 10px 0;
+        }
+        toc-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem; 
+        }
+        
         nav ul {
             list-style: none;
             padding: 0;
@@ -161,6 +194,7 @@ if ($selectedAlumniID) {
 <body>
     <header>
         <h1>Report Option 1: Alumni Details</h1>
+      <img src="Images/ColesLogo.png" alt="Coles Logo" class="logo">
         <nav>
             <ul class="toc-menu">
                 <li><a href="NewsletterPage.php">Newsletter</a></li>

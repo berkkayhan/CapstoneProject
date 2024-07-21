@@ -1,67 +1,100 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information Systems and Security Department Alumni System</title>
-    <link rel="stylesheet" href="css/stylesss.css" />
+    <link rel="stylesheet" href="css/stylesss.css">
     <style>
-      .main-button {
-        display: block;
-        width: 300px;
-        margin: 20px auto;
-        padding: 20px;
-        text-align: center;
-        font-size: 1.5rem;
-        background-color: #ffc107;
-        color: #000000;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-      .main-button:hover {
-        background-color: #000000;
-        color: #ffc107;
-      }
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2.5rem; 
+        }
+        nav ul.toc-menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 10px 0;
+        }
+        nav ul.toc-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem; 
+        }
+        .main-button {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: #ffc107;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .main-button:hover {
+            background-color: #000000;
+            color: #ffc107;
+        }
+        .content-section {
+            padding: 40px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px;
+        }
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .content-section p {
+            font-size: 1.2rem;
+            color: #666;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>KSU IS Department Alumni System Homepage</h1>
-      <nav>
-        <ul class="toc-menu">
-          <li><a href="ReportsPage.html">Reports</a></li>
-          <li><a href="NewsletterPage.php">Newsletter</a></li>
-          <li><a href="AlumniDirectory.php">Alumni Directory</a></li>
-        </ul>
-      </nav>
+        <h1>KSU IS Department Alumni System Homepage</h1>
+        <nav>
+            <ul class="toc-menu">
+                <li><a href="ReportsPage.html">Reports</a></li>
+                <li><a href="NewsletterPage.php">Newsletter</a></li>
+                <li><a href="AlumniDirectory.php">Alumni Directory</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section>
-        <h2>Information Systems and Security Department Alumni System</h2>
-        <p>Welcome to the IS department's Alumni System</p>
+        <section class="content-section">
+            <h2>Information Systems and Security Department Alumni System</h2>
+            <p>Welcome to the IS department's Alumni System. Here you can create reports, newsletters, and view the alumni directory.</p>
+        </section>
         <a href="ReportsPage.html" class="main-button">Create Report</a>
         <a href="NewsletterPage.php" class="main-button">Create Newsletter</a>
-        <a href="AlumniDirectory.php" class="main-button"
-          >View Alumni Directory</a
-        >
-      </section>
+        <a href="AlumniDirectory.php" class="main-button">View Alumni Directory</a>
     </main>
 
     <footer>
-      <div class="footer-links">
-        <a href="https://www.kennesaw.edu/" class="footer-link"
-          >Kennesaw State University</a
-        >
-        <a
-          href="https://www.kennesaw.edu/coles/academics/information-systems-security/index.php"
-          class="footer-link"
-          >Information Systems Security at Coles College</a
-        >
-        <a href="https://www.kennesaw.edu/coles/index.php" class="footer-link"
-          >Coles College of Business</a
-        >
-      </div>
+        <div class="footer-links">
+            <a href="https://www.kennesaw.edu/" class="footer-link">Kennesaw State University</a>
+            <a href="https://www.kennesaw.edu/coles/academics/information-systems-security/index.php" class="footer-link">Information Systems Security at Coles College</a>
+            <a href="https://www.kennesaw.edu/coles/index.php" class="footer-link">Coles College of Business</a>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

@@ -13,10 +13,36 @@
             padding: 0;
         }
         header {
-            background: #333;
+            position: relative;
+            padding: 0 20px;
+            background-color: #333;
             color: #fff;
-            padding: 1rem;
-            text-align: center;
+            text-align: center; 
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 15px 0;
+            position: relative;
+        }
+        .logo {
+            height: 82px;
+            width: auto; 
+            position: absolute; 
+            top: 10px;
+            right: 20px; 
+        }
+        .toc-menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: center; 
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .toc-menu li a {
+            text-decoration: none;
+            color: white;
         }
         nav ul {
             list-style: none;
@@ -93,6 +119,7 @@
 <body>
     <header>
         <h1>Custom Alumni Report</h1>
+      <img src="Images/ColesLogo.png" alt="Coles Logo" class="logo">
         <nav>
             <ul class="toc-menu">
                 <li><a href="NewsletterPage.php">Newsletter</a></li>

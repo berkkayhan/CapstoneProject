@@ -1,116 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reports Page</title>
-    <link rel="stylesheet" href="css/stylesss.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/stylesss.css">
+    <style>
+        header {
+            position: relative;
+            padding: 0 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center; 
+        }
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 15px 0;
+            position: relative;
+        }
+        .logo {
+            height: 95px;
+            width: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 20px; 
+        }
+      header h1 {
+            font-size: 2.5rem; 
+        }
+        toc-menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 10px 0;
+        }
+        toc-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem; 
+        }
+        
+        .report-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; 
+            padding: 10px;
+        }
+        .report-button {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            padding: 10px; 
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .report-button:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .report-button button {
+            width: 100%;
+            padding: 8px; 
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: #ffc107;
+            color: black;
+            border: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .report-button button:hover {
+            background-color: #ffca2c;
+            color: white;
+        }
+        .report-button p {
+            margin-top: 5px; 
+            font-size: 0.9rem; 
+            color: #666;
+        }
+        .custom-report-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .custom-report-form label, .custom-report-form select, .custom-report-form input, .custom-report-form button {
+            width: 100%;
+            margin-bottom: 5px; 
+            padding: 8px; 
+            font-size: 0.9rem;
+        }
+        .custom-report-form button {
+            background-color: #ffc107;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .custom-report-form button:hover {
+            background-color: #ffca2c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
     <header>
-      <h1>Reports Page</h1>
-      <nav>
-        <ul class="toc-menu">
-          <li><a href="NewsletterPage.php">Newsletter</a></li>
-          <li><a href="AlumniDirectory.php">Alumni Directory</a></li>
-          <li><a href="KSUwebsite.html">Home</a></li>
-        </ul>
-      </nav>
+        <div class="header-content">
+            <h1>Reports Page</h1>
+            <img src="Images/ColesLogo.png" alt="Coles Logo" class="logo">
+        </div>
+        <nav>
+            <ul class="toc-menu">
+                <li><a href="NewsletterPage.php">Newsletter</a></li>
+                <li><a href="AlumniDirectory.php">Alumni Directory</a></li>
+                <li><a href="KSUwebsite.html">Home</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section class="report-options">
-        <div class="report-button">
-          <button onclick="window.location.href='report1.php'">
-            Report Option 1
-          </button>
-          <p>
-            Description of Report 1: A list of all alumni containing their
-            major, year graduated, and current job.
-          </p>
-        </div>
-        <div class="report-button">
-          <button onclick="window.location.href='report2.php'">
-            Report Option 2
-          </button>
-          <p>
-            Description of Report 2: A list of all alumni that have had multiple
-            jobs.
-          </p>
-        </div>
-        <div class="report-button">
-          <button onclick="window.location.href='report3.php'">
-            Report Option 3
-          </button>
-          <p>
-            Description of Report 3: A list of all alumni donations and
-            descriptions.
-          </p>
-        </div>
-        <div class="report-button">
-          <button onclick="window.location.href='report4.php'">
-            Report Option 4
-          </button>
-          <p>Description of Report 4: A list of all alumni and their skills.</p>
-        </div>
-        <div class="report-button">
-          <button onclick="window.location.href='customReport.php'">
-            Custom Report
-          </button>
-          <p>Custom Report Builder</p>
-        </div>
-      </section>
+        <section class="report-options">
+            <div class="report-button">
+                <button onclick="window.location.href='report1.php'">Report 1</button>
+                <p>Description of Report 1: A list of all alumni containing their major, year graduated, and current job.</p>
+            </div>
+            <div class="report-button">
+                <button onclick="window.location.href='report2.php'">Report 2</button>
+                <p>Description of Report 2: A list of all alumni that have had multiple jobs.</p>
+            </div>
+            <div class="report-button">
+                <button onclick="window.location.href='report3.php'">Report 3</button>
+                <p>Description of Report 3: A list of all alumni donations and descriptions.</p>
+            </div>
+            <div class="report-button">
+                <button onclick="window.location.href='report4.php'">Report 4</button>
+                <p>Description of Report 4: A list of all alumni and their skills.</p>
+            </div>
+            <div class="report-button">
+                <button onclick="window.location.href='customReport.php'">Custom Report</button>
+                <p>Custom Report Builder</p>
+            </div>
+        </section>
 
-      <section id="reportResults" class="report-results">
-        <?php include('customreport.php'); ?>
-      </section>
+        <section id="reportResults" class="report-results">
+            <?php include('customreport.php'); ?>
+        </section>
 
-      <div
-        id="custom-report-form"
-        class="custom-report-form"
-        style="display: none"
-      >
-        <h2>Custom Report Criteria</h2>
-        <form method="POST" action="customreport.php">
-          <label for="major">Select Major:</label>
-          <select name="major" id="major">
-            <option value="">All Majors</option>
-            <option value="MIS">MIS</option>
-            <option value="ISA">ISA</option></select
-          ><br />
-          <label for="startYear">Graduation Year Range:</label>
-          <input
-            type="number"
-            name="startYear"
-            id="startYear"
-            placeholder="Start Year"
-          />
-          to
-          <input
-            type="number"
-            name="endYear"
-            id="endYear"
-            placeholder="End Year"
-          /><br />
-          <button type="submit" name="generateReport">Generate Report</button>
-        </form>
-      </div>
+        <div id="custom-report-form" class="custom-report-form" style="display:none;">
+            <h2>Custom Report Criteria</h2>
+            <form method="POST" action="customreport.php">
+                <label for="major">Select Major:</label>
+                <select name="major" id="major">
+                    <option value="">All Majors</option>
+                    <option value="MIS">MIS</option>
+                    <option value="ISA">ISA</option>
+                </select><br>
+                <label for="startYear">Graduation Year Range:</label>
+                <input type="number" name="startYear" id="startYear" placeholder="Start Year"> to
+                <input type="number" name="endYear" id="endYear" placeholder="End Year"><br>
+                <button type="submit" name="generateReport">Generate Report</button>
+            </form>
+        </div>
     </main>
 
     <footer>
-      <div class="footer-links">
-        <a href="https://www.kennesaw.edu/" class="footer-link"
-          >Kennesaw State University</a
-        >
-        <a
-          href="https://www.kennesaw.edu/coles/academics/information-systems-security/index.php"
-          class="footer-link"
-          >Information Systems Security at Coles College</a
-        >
-        <a href="https://www.kennesaw.edu/coles/index.php" class="footer-link"
-          >Coles College of Business</a
-        >
-      </div>
+        <div class="footer-links">
+            <a href="https://www.kennesaw.edu/" class="footer-link">Kennesaw State University</a>
+            <a href="https://www.kennesaw.edu/coles/academics/information-systems-security/index.php" class="footer-link">Information Systems Security at Coles College</a>
+            <a href="https://www.kennesaw.edu/coles/index.php" class="footer-link">Coles College of Business</a>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
